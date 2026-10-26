@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Converter Pro v4.0</title>
+    <meta name="description" content="Multi-file codebase migration and framework transformation platform for React, Vue, Svelte, Angular, Solid, Laravel, and Tailwind." />
+    <meta property="og:title" content="Code Converter Pro v4.0" />
+    <meta property="og:description" content="Multi-file codebase migration and framework transformation platform for React, Vue, Svelte, Angular, Solid, Laravel, and Tailwind." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Gracefully ignore Vite HMR WebSocket errors in cloud preview iframe
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = event && event.reason;
+        var msg = reason && (reason.message || String(reason));
+        var stack = reason && reason.stack;
+        if (
+          (msg && (msg.indexOf('WebSocket') !== -1 || msg.indexOf('closed without opened') !== -1)) ||
+          (stack && stack.indexOf('@vite/client') !== -1)
+        ) {
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        var msg = event && event.message;
+        var filename = event && event.filename;
+        if (
+          (msg && (msg.indexOf('WebSocket') !== -1 || msg.indexOf('closed without opened') !== -1)) ||
+          (filename && filename.indexOf('@vite/client') !== -1)
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+    <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="theme-color" content="#0f172a" />
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(console.warn);
+      });
+    }
+  </script>
+</body>
+</html>
+

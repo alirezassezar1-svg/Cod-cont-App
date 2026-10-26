@@ -1,0 +1,6 @@
+{
+  "name": "Code Converter Pro v4.0",
+  "description": "Multi-file codebase migration and framework transformation platform for React, Vue, Svelte, Angular, Solid, Laravel, and Tailwind.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
